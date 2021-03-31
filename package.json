@@ -1,0 +1,45 @@
+{
+  "name": "alex-bota",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alex Bota Web Developer, Create a professional website optimized for SEO",
+  "author": "Alex Bota <alexbota@outlook.it>",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase": "^8.3.1",
+    "gatsby": "^3.1.1",
+    "gatsby-plugin-google-analytics": "^3.1.0",
+    "gatsby-plugin-image": "^1.1.2",
+    "gatsby-plugin-layouts": "^0.1.0",
+    "gatsby-plugin-manifest": "^3.1.0",
+    "gatsby-plugin-react-helmet": "^4.1.0",
+    "gatsby-plugin-robots-txt": "^1.5.5",
+    "gatsby-plugin-sass": "^4.1.0",
+    "gatsby-plugin-sharp": "^3.1.2",
+    "gatsby-plugin-sitemap": "^3.1.0",
+    "gatsby-source-filesystem": "^3.1.0",
+    "gatsby-transformer-sharp": "^3.1.0",
+    "primeflex": "^2.0.0",
+    "primeicons": "^4.1.0",
+    "primereact": "^6.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-firebase-hooks": "^3.0.3",
+    "react-helmet": "^6.1.0",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

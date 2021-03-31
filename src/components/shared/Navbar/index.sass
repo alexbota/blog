@@ -1,0 +1,81 @@
+@use "sass:map"
+@import '../../../styles/variables'
+
+.navbar
+  font-weight: 500
+  position: fixed
+  z-index: 10
+  width: 100vw
+  font-size: 18px
+  background: map-get($palette, 'clr-white')
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+
+.main-nav
+  list-style-type: none
+  display: none
+  animation: growOut 300ms ease-in-out forwards
+  transform-origin: top center
+
+@keyframes growOut
+  0%
+    transform: scale(0)
+  80%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.nav-links
+  text-decoration: none
+  color: map-get($palette, 'clr-black')
+
+.nav-links:hover
+  border-bottom: 2px solid map-get($palette, 'clr-grey-5')
+  color: map-get($palette, 'clr-grey-5')
+
+.main-nav
+  li
+    text-align: center
+    margin: 40px auto
+
+.menu-button
+  background: inherit
+  border: none
+  padding: 0
+  cursor: pointer
+  outline: inherit
+
+.navbar-toggle
+  position: absolute
+  top: 10px
+  right: 20px
+  cursor: pointer
+  color: #000
+  font-size: 24px
+
+.active
+  display: block
+
+@media screen and (min-width: 768px)
+  .navbar
+    display: flex
+    justify-content: space-between
+    padding-bottom: 0
+    height: 70px
+    align-items: center
+
+  .main-nav
+    display: flex
+    margin-right: 30px
+    flex-direction: row
+    justify-content: flex-end
+    animation: none
+    li
+      margin: 0
+
+  .nav-links
+    margin-left: 40px
+
+  .navbar-toggle
+    display: none
+
+
