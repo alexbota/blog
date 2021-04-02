@@ -10,7 +10,6 @@ const AppProvider = ({ children }) => {
   const projects = projects_data
   const services = services_data
   const [person, setPerson] = useState({ name: '', email: '', message: '' })
-
   const submitSuccess = useRef(null)
 
   const openDropdown = () => {

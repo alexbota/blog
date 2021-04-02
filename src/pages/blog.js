@@ -5,22 +5,67 @@ import DefaultLayout from '../components/layouts'
 import '../styles/Blog.sass'
 // import SEO
 import SEO from '../components/seo'
+// import graphql
+import { graphql } from 'gatsby'
+// import components
+import Article from '../components/article'
 
-const Blog = () => {
+const Blog = (props) => {
   return (
     <DefaultLayout>
-      <SEO
-        title="Alex Bota | Blog"
-        keywords={[`web development blog`, `alex bota blog`]}
-      />
-      <section className="blog-header p-d-flex p-flex-column p-jc-end p-ai-start">
-        <h1 className="p-mx-6">Blog Posts</h1>
-      </section>
-      <section className="blog-content p-mx-6">
-        <h2>More content coming soon...</h2>
+      <SEO title="Alex Bota | Blog" keywords={[`blog`, `web development`]} />
+      <section className="section-blog p-d-flex p-flex-column p-ai-center p-jc-center p-px-4">
+        <div className="blog-header p-d-flex p-ai-center p-jc-between">
+          <h1>Blog</h1>
+          <p style={{ margin: '0' }}>
+            <a
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              href="https://twitter.com/vladalexbota"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Follow me on Twitter <i className="pi pi-twitter"></i>
+            </a>
+          </p>
+        </div>
+        <p className="p-mb-6">
+          I blog my technical thoughts, my vision for the products I create and
+          my involvement in web development
+        </p>
+        {props.data.articles.edges.map((article) => (
+          <Article
+            key={article.node.slugs[0]}
+            slug={article.node.slugs[0]}
+            data={article.node.data}
+          />
+        ))}
       </section>
     </DefaultLayout>
   )
 }
 
 export default Blog
+
+export const IndexQuery = graphql`
+  query Articles {
+    articles: allPrismicArticle {
+      edges {
+        node {
+          slugs
+          data {
+            title {
+              text
+            }
+            image {
+              url
+              alt
+            }
+            paragraph {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -28,6 +28,7 @@
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-plugin-sitemap": "^3.1.0",
     "gatsby-source-filesystem": "^3.1.0",
+    "gatsby-source-prismic": "^3.3.4",
     "gatsby-transformer-sharp": "^3.1.0",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
@@ -41,5 +42,8 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

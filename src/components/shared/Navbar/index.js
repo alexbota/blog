@@ -7,12 +7,12 @@ import { useGlobalContext } from '../../../context/GlobalContextProvider'
 import { Link } from 'gatsby'
 import Logo from '../Logo/Logo'
 
-const Navbar = () => {
+const Navbar = ({ scrolled }) => {
   const { dropdown, openDropdown, closeDropdown } = useGlobalContext()
 
   return (
     <nav
-      className="navbar"
+      className={scrolled ? 'navbar' : 'navbar navbar-active'}
       onMouseLeave={closeDropdown}
       onFocus={() => void 0}
       role="presentation"

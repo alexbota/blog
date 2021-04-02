@@ -4,11 +4,20 @@
 .navbar
   font-weight: 500
   position: fixed
+  top: 0
   z-index: 10
   width: 100vw
   font-size: 18px
-  background: map-get($palette, 'clr-white')
+  background: map-get($palette, 'clr-grey-2')
+  a
+    color: map-get($palette, 'clr-white')
+
+.navbar-active
+  background: rgba(map-get($palette, 'clr-white'), 1)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+  a
+    color: map-get($palette, 'clr-black')
+
 
 .main-nav
   list-style-type: none
@@ -26,7 +35,7 @@
 
 .nav-links
   text-decoration: none
-  color: map-get($palette, 'clr-black')
+  //color: map-get($palette, 'clr-black')
 
 .nav-links:hover
   border-bottom: 2px solid map-get($palette, 'clr-grey-5')
@@ -54,6 +63,8 @@
 
 .active
   display: block
+  button
+    color: map-get($palette, 'clr-white')
 
 @media screen and (min-width: 768px)
   .navbar

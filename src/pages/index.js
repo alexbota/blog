@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 // import layouts
 import DefaultLayout from '../components/layouts'
 // import styles
@@ -7,15 +7,32 @@ import '../styles/index.sass'
 import SEO from '../components/seo'
 // import components
 import undraw_web_developer from '../images/undraw_web_developer.svg'
-import Footer from '../components/shared/Footer'
 import HomeHero from '../components/home/HomeHero'
 import HomeProjects from '../components/home/HomeProjects'
 import HomeServices from '../components/home/HomeServices'
 import { Divider } from 'primereact/divider'
 
 const IndexPage = () => {
+  const [scrolled, setScrolled] = useState(false)
+  const [offset, setOffset] = useState(0)
+  const handleScroll = () => {
+    setOffset(window.scrollY)
+    if (offset <= 480) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
   return (
-    <DefaultLayout>
+    <DefaultLayout scrolled={scrolled}>
       <SEO
         title="Alex Bota | Front-end Developer React"
         keywords={[
@@ -60,7 +77,6 @@ const IndexPage = () => {
           <HomeServices />
         </div>
       </section>
-      <Footer />
     </DefaultLayout>
   )
 }

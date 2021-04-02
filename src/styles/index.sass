@@ -7,24 +7,36 @@ $hover-color: rgba(220, 120, 150, 1)
 
 // Global Styles
 
-h2
-  font-weight: 600
+.section-about,
+.section-work
+  h2
+    font-size: 1.6rem
+    font-weight: 700
+    color: map-get($palette, 'clr-primary-2')
+  h3
+    font-size: 1.4rem
+    color: map-get($palette, 'clr-primary-2')
 p
   font-size: 1.2rem
+  color: map-get($palette, 'clr-grey-3')
 
 // Hero
 
 .section-hero
   position: relative
   height: 550px
-  max-height: 100vh
   background: map-get($palette, 'clr-primary-2')
   overflow: hidden
   .hero-info
+    text-align: center
     z-index: 1
     color: map-get($palette, 'clr-white')
-    max-width: 60vw
-    text-align: center
+    max-width: 80vw
+    span
+      color: map-get($palette, 'clr-primary-8')
+    h1
+      font-size: 2.5rem
+      font-family: 'Anton', 'sans-serif'
 
 .waves
   position: absolute
@@ -50,7 +62,6 @@ p
 
 .waves::after
   border-radius: 44%
-  background: rgba(51, 51, 51, 0.5)
   animation: waves 15s linear infinite
 
 @keyframes waves
@@ -101,6 +112,8 @@ p
   .service-card
     max-width: 25rem
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 1014px)
   .hero-info
-    font-size: 1.3rem
+    h1
+      text-align: start
+      font-size: 4rem !important

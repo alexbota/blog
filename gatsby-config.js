@@ -1,48 +1,58 @@
-require("dotenv").config({ path: ".env" });
+require('dotenv').config({ path: '.env' });
 
 module.exports = {
   siteMetadata: {
-    title: "Alex Bota",
+    title: 'Alex Bota',
     description:
-      "Alex Bota Web Developer, Create a professional website optimized for SEO",
-    author: "Alex Bota",
-    siteUrl: "https://alexbota.me/",
+      'Alex Bota Web Developer, Create a professional website optimized for SEO',
+    author: 'Alex Bota',
+    siteUrl: 'https://alexbota.me/',
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-sass',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-source-prismic',
       options: {
-        host: "https://alexbota.me/",
-        sitemap: "https://alexbota.me/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKgEN,
+        schemas: {
+          page: require('./custom_types/blog_post.json'),
+        },
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        trackingId: "G-XR8TBZHRER",
+        host: 'https://alexbota.me/',
+        sitemap: 'https://alexbota.me/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        icon: "src/images/icon.png",
+        trackingId: 'G-XR8TBZHRER',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "images",
-        path: "./src/images/",
+        icon: 'src/images/icon.png',
       },
-      __key: "images",
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
   ],
 };

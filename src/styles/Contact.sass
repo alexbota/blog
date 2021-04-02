@@ -1,10 +1,16 @@
+@use "sass:map"
+@import '../styles/variables'
+
 .section-contact
   height: 100%
   h1
+    color: map-get($palette, 'clr-primary-2')
     font-size: 3rem
     margin-top: 9rem
     margin-bottom: 7rem
     letter-spacing: 0.3rem
+  button
+    background: map-get($palette, 'clr-primary-2')
 
 .submit-toast
   min-width: 10rem

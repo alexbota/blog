@@ -7,12 +7,14 @@ import 'primeflex/primeflex.css'
 import '../../styles/global.sass'
 // import components
 import Navbar from '../shared/Navbar'
+import Footer from '../shared/Footer'
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, scrolled }) => {
   return (
     <>
-      <Navbar />
+      <Navbar scrolled={scrolled} />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

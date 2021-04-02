@@ -5,9 +5,12 @@ const HomeHero = () => {
     <section className="section-hero p-d-flex p-flex-column p-jc-center p-ai-center">
       <div className="hero-info">
         <h1>
-          Freelance Web Designer & Developer based in Milan, Italy. I make Web
-          Applications, usually with React
+          Freelance Web Developer &<br /> Designer
         </h1>
+        <h2>
+          I build <span className="clr-primary-8">web applications</span> which
+          enable companies to succeed
+        </h2>
       </div>
       <div className="waves"></div>
     </section>
