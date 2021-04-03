@@ -24,6 +24,7 @@ const Article = (props) => {
   return (
     <Card
       title={props.data.title[0].text}
+      subTitle={props.data.date}
       style={{ maxWidth: '43rem' }}
       header={header}
       className="p-d-flex p-flex-column p-ai-center p-mb-6 p-p-5"

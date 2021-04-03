@@ -64,7 +64,7 @@ const IndexPage = () => {
         </div>
       </section>
       <Divider />
-      <section className="section-work p-d-flex p-flex-column p-jc-center p-ai-center p-mx-3">
+      <section className="section-work p-d-flex p-flex-column p-jc-center p-ai-center">
         <h2>MY RECENT WORK</h2>
         <p>Here are a few project I've worked on</p>
         <HomeProjects />

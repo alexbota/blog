@@ -13,9 +13,9 @@ import Article from '../components/article'
 const Blog = (props) => {
   return (
     <DefaultLayout>
-      <SEO title="Alex Bota | Blog" keywords={[`blog`, `web development`]} />
-      <section className="section-blog p-d-flex p-flex-column p-ai-center p-jc-center p-px-4">
-        <div className="blog-header p-d-flex p-ai-center p-jc-between">
+      <SEO title="Alex Bota | Blog" keywords={[`blog`]} />
+      <section className="section-blog p-d-flex p-flex-column p-ai-center p-jc-center p-px-3">
+        <div className="blog-header p-d-flex p-flex-column p-flex-md-row p-ai-center p-jc-between p-mb-3">
           <h1>Blog</h1>
           <p style={{ margin: '0' }}>
             <a
@@ -63,6 +63,7 @@ export const IndexQuery = graphql`
             paragraph {
               text
             }
+            date
           }
         }
       }
