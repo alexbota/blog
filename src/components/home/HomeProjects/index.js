@@ -9,16 +9,24 @@ const HomeProjects = () => {
   const { projects } = useGlobalContext()
 
   return (
-    <>
+    <section className="section-work p-d-flex p-flex-column p-ai-center p-mx-5">
+      <h2>MY RECENT WORK</h2>
+      <p>Here are a few project I've worked on</p>
       {projects.map((project) => {
         const { id, title, url, image, description } = project
         return (
-          <div key={id}>
-            <article key={id} className="project-card p-grid p-mx-3">
-              <div className="p-col-12 p-lg-6 p-d-flex p-ai-center p-jc-center">
+          <article key={id}>
+            <div
+              style={{ marginTop: '5rem', marginBottom: '5rem' }}
+              className="p-d-flex p-flex-column p-flex-lg-row p-jc-center p-ai-center p-mx-5"
+            >
+              <div
+                style={{ maxWidth: '500px' }}
+                className="p-mb-4 p-mb-lg-0 p-mr-lg-4"
+              >
                 <img src={image} alt={title} width="407" height="237" />
               </div>
-              <div className="p-col-12 p-lg-6 p-d-flex p-flex-column p-jc-center">
+              <div style={{ maxWidth: '500px' }} className="p-ml-lg-4">
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <div>
@@ -30,19 +38,19 @@ const HomeProjects = () => {
                   >
                     <Button
                       label="See Project"
-                      icon="pi pi-angle-right"
+                      icon="pi pi-arrow-right"
                       iconPos="right"
                       className="project-btn p-button-rounded"
                     ></Button>
                   </a>
                 </div>
               </div>
-            </article>
-            <Divider style={{ margin: '0' }} />
-          </div>
+            </div>
+            <Divider style={{ margin: '0', width: '100vw' }} />
+          </article>
         )
       })}
-    </>
+    </section>
   )
 }
 

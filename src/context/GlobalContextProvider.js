@@ -1,6 +1,5 @@
-import React, { useState, useContext, useRef } from 'react'
+import React, { useState, useContext, useRef, useEffect } from 'react'
 import projects_data from '../data/projects'
-import services_data from '../data/services'
 import firebase from '../firebase/firebaseConfig'
 
 const AppContext = React.createContext()
@@ -8,9 +7,19 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
   const [dropdown, setDropdown] = useState(false)
   const projects = projects_data
-  const services = services_data
   const [person, setPerson] = useState({ name: '', email: '', message: '' })
+  const [scrolled, setScrolled] = useState(false)
+  const [offset, setOffset] = useState(0)
   const submitSuccess = useRef(null)
+
+  const handleScroll = () => {
+    setOffset(window.scrollY)
+    if (offset <= 480) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
 
   const openDropdown = () => {
     if (dropdown === true) {
@@ -56,6 +65,13 @@ const AppProvider = ({ children }) => {
     }
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
   return (
     <AppContext.Provider
       value={{
@@ -63,8 +79,8 @@ const AppProvider = ({ children }) => {
         openDropdown,
         closeDropdown,
         projects,
-        services,
         person,
+        scrolled,
         submitSuccess,
         handleChange,
         handleSubmit,

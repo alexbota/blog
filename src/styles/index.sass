@@ -85,17 +85,15 @@ p
 // Work Section
 
 .section-work
-  .project-card
-    margin: 6rem 0
   h3
     margin-top: 0
     font-weight: 700
   img
     width: 100%
     height: auto
-    max-width: 500px
   .project-btn
     background: map-get($palette, 'clr-primary-2')
+    font-weight: 600
 
 // Services Section
 
@@ -108,12 +106,26 @@ p
     height: 250px
   .card-container
     position: relative
-    top: 2.5rem
+    top: 2.6rem
   .service-card
+    border-radius: 0
     max-width: 25rem
+  .first-card
+    border-radius: 10px 10px 0 0
+  .last-card
+    border-radius: 0 0 10px 10px
+
+@media screen and (min-width: 768px)
+  .section-services
+    .first-card
+      border-radius: 10px 0 0 10px
+    .last-card
+      border-radius: 0 10px 10px 0
+
 
 @media screen and (min-width: 1014px)
   .hero-info
     h1
       text-align: start
       font-size: 4rem !important
+

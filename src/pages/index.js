@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+// import context
+import { useGlobalContext } from '../context/GlobalContextProvider'
 // import layouts
 import DefaultLayout from '../components/layouts'
 // import styles
@@ -6,31 +8,14 @@ import '../styles/index.sass'
 // import SEO
 import SEO from '../components/seo'
 // import components
-import undraw_web_developer from '../images/undraw_web_developer.svg'
 import HomeHero from '../components/home/HomeHero'
+import HomeAbout from '../components/home/HomeAbout'
 import HomeProjects from '../components/home/HomeProjects'
 import HomeServices from '../components/home/HomeServices'
 import { Divider } from 'primereact/divider'
 
 const IndexPage = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [offset, setOffset] = useState(0)
-  const handleScroll = () => {
-    setOffset(window.scrollY)
-    if (offset <= 480) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  })
-
+  const { scrolled } = useGlobalContext()
   return (
     <DefaultLayout scrolled={scrolled}>
       <SEO
@@ -44,39 +29,10 @@ const IndexPage = () => {
         ]}
       />
       <HomeHero />
-      <section className="section-about p-d-flex p-flex-column p-jc-center p-ai-center">
-        <div className="p-mb-5">
-          <h2>Hi, I'm Alex. Nice to meet you.</h2>
-          <p>
-            Since the beginning of my journey nearly 2 years ago, I enjoyed
-            building small sites and interactive web apps. If you are a business
-            seeking a website which is set apart from the competition, let's
-            work together
-          </p>
-        </div>
-        <div className="p-d-flex p-jc-center p-ai-center">
-          <img
-            src={undraw_web_developer}
-            alt="illustration"
-            width="400"
-            height="400"
-          />
-        </div>
-      </section>
+      <HomeAbout />
       <Divider />
-      <section className="section-work p-d-flex p-flex-column p-jc-center p-ai-center">
-        <h2>MY RECENT WORK</h2>
-        <p>Here are a few project I've worked on</p>
-        <HomeProjects />
-      </section>
-      <section
-        id="services"
-        className="section-services p-d-flex p-flex-column p-justify-center p-ai-center"
-      >
-        <div className="card-container p-grid p-m-0 p-justify-center">
-          <HomeServices />
-        </div>
-      </section>
+      <HomeProjects />
+      <HomeServices />
     </DefaultLayout>
   )
 }
