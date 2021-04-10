@@ -24,9 +24,9 @@ const Contact = () => {
   return (
     <DefaultLayout>
       <SEO title="Alex Bota | Contact" />
-      <section className="section-contact p-d-flex p-flex-column p-ai-center p-mx-6  p-mb-6">
+      <section className="contact p-d-flex p-flex-column p-ai-center p-mx-6  p-mb-6">
         <Toast className="submit-toast" ref={submitSuccess} />
-        <h1>Ready to get started? Let's get in touch</h1>
+        <h1>Get in touch</h1>
         <form className="p-fluid p-formgrid p-grid" onSubmit={handleSubmit}>
           <div className="p-field p-col-12 p-md-6">
             <label htmlFor="name">Name</label>

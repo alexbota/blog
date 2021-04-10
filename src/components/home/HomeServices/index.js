@@ -2,8 +2,7 @@ import React from 'react'
 // import components
 import { Card } from 'primereact/card'
 import undraw_pen from '../../../images/undraw_pen.svg'
-import undraw_react from '../../../images/undraw_react.svg'
-import undraw_search from '../../../images/undraw_search.svg'
+import undraw_slider from '../../../images/undraw_slider.svg'
 
 const HomeServices = () => {
   const header1 = (
@@ -19,17 +18,7 @@ const HomeServices = () => {
   const header2 = (
     <img
       alt="illustration"
-      src={undraw_react}
-      width="300"
-      height="250"
-      className="p-p-5"
-    />
-  )
-
-  const header3 = (
-    <img
-      alt="illustration"
-      src={undraw_search}
+      src={undraw_slider}
       width="300"
       height="250"
       className="p-p-5"
@@ -39,46 +28,36 @@ const HomeServices = () => {
   return (
     <section
       id="services"
-      className="section-services p-d-flex p-flex-column p-justify-center p-ai-center"
+      className="section-services p-grid p-justify-center p-mx-3 p-mx-lg-6"
     >
-      <div className="card-container p-grid p-m-0 p-justify-center">
-        <Card
-          className="service-card first-card p-col-12 p-md-4"
-          title="Web Design"
-          header={header1}
-        >
+      <div className="p-col-12 p-lg-4 p-pr-md-6">
+        <h2>SERVICES</h2>
+        <p>
+          The web is changing rapidly and with it the possibilities to implement
+          websites and web applications. Using the modern JAMStack philosophy
+          and using tools like Static Site Generators, Headless CMS and a
+          serverless architecture make it possible to create modern, state of
+          the art web experiences.
+        </p>
+      </div>
+      <div className="p-col-12 p-md-6 p-lg-4 p-xl-3">
+        <Card className="service-card" title="UI/UX DESIGN" header={header1}>
           <p className="p-m-0">
-            My approach to website design is to create a website which
-            strengthens your company’s brand while ensuring ease of use and
-            simplicity for your audience. The website design process starts with
-            the page layouts, wire-frames sitemaps and menu structures. Feedback
-            on the design concepts is essential before the start of the
-            development process.
+            UI & UX involves planning and iterating a site's structure and
+            layout. Once the proper information architecture is in place, I
+            design the visual layer to create an optimal user experience.
           </p>
         </Card>
+      </div>
+      <div className="p-col-12 p-md-6 p-lg-4 p-xl-3">
         <Card
-          className="service-card p-col-12 p-md-4"
-          title="Front-end Development"
+          className="service-card"
+          title="PREMIUM WEBSITE DEVELOPMENT"
           header={header2}
         >
           <p className="p-m-0">
-            Responsive websites build for an optimal user experience that
-            achieves your business goals. The audience should have an enjoyable
-            positive experience when using your website, ensuring ease of use
-            and simplicity is very important.
-          </p>
-        </Card>
-        <Card
-          className="service-card last-card p-col-12 p-md-4"
-          title="SEO"
-          header={header3}
-        >
-          <p className="p-m-0">
-            SEO (Search Engine Optimisation) is the practice of improving the
-            quality and quantity of website traffic, as well as exposure to your
-            brand, through non-paid (known as “organic”) search engine results.
-            The websites that Google lists have been fully optimised to show up
-            for those specific keywords.
+            When you want a tailor-made website with maximum flexibility and a
+            unique experience aimed at maximum SEO, speed and reliability.
           </p>
         </Card>
       </div>

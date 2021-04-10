@@ -16,7 +16,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
-        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKgEN,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
         schemas: {
           page: require('./custom_types/blog_post.json'),
         },

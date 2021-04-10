@@ -1,24 +1,28 @@
 import React from 'react'
-import undraw_web_developer from '../../../images/undraw_web_developer.svg'
+import undraw_work_together from '../../../images/undraw_work_together.svg'
 
 const HomeAbout = () => {
   return (
-    <section className="section-about p-d-flex p-flex-column p-jc-center p-ai-center">
-      <div className="p-mb-5">
+    <section className="section-about p-d-flex p-flex-column p-flex-xl-row p-jc-center p-ai-center">
+      <div style={{ maxWidth: '500px' }} className="p-mb-5 p-mr-0 p-mr-xl-4">
         <h2>Hi, I'm Alex. Nice to meet you.</h2>
         <p>
-          Since the beginning of my journey nearly 2 years ago, I enjoyed
-          building small sites and interactive web apps. If you are a business
-          seeking a website which is set apart from the competition, let's work
-          together
+          I specialize in helping businesses integrate design and technology to
+          better serve customers, extend online reach, and increase revenue.
+          <br />
+          If you are a business seeking a lightning-fast, SEO friendly website,
+          let's work together.
         </p>
       </div>
-      <div className="p-d-flex p-jc-center p-ai-center">
+      <div
+        style={{ maxWidth: '500px' }}
+        className="p-d-flex p-jc-center p-ai-center p-ml-0 p-ml-xl-4"
+      >
         <img
-          src={undraw_web_developer}
+          src={undraw_work_together}
           alt="illustration"
-          width="400"
-          height="400"
+          width="500"
+          height="500"
         />
       </div>
     </section>

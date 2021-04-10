@@ -12,6 +12,7 @@ import HomeHero from '../components/home/HomeHero'
 import HomeAbout from '../components/home/HomeAbout'
 import HomeProjects from '../components/home/HomeProjects'
 import HomeServices from '../components/home/HomeServices'
+import HomeContact from '../components/home/HomeContact'
 import { Divider } from 'primereact/divider'
 
 const IndexPage = () => {
@@ -31,8 +32,10 @@ const IndexPage = () => {
       <HomeHero />
       <HomeAbout />
       <Divider />
-      <HomeProjects />
       <HomeServices />
+      <Divider />
+      <HomeProjects />
+      <HomeContact />
     </DefaultLayout>
   )
 }

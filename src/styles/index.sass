@@ -8,16 +8,17 @@ $hover-color: rgba(220, 120, 150, 1)
 // Global Styles
 
 .section-about,
-.section-work
+.section-work,
+.section-services
   h2
-    font-size: 1.6rem
+    font-size: 2.5rem
     font-weight: 700
-    color: map-get($palette, 'clr-primary-2')
+    color: map-get($palette, 'clr-grey-2')
   h3
     font-size: 1.4rem
-    color: map-get($palette, 'clr-primary-2')
+    color: map-get($palette, 'clr-grey-2')
 p
-  font-size: 1.2rem
+  font-size: 1.3rem
   color: map-get($palette, 'clr-grey-3')
 
 // Hero
@@ -35,7 +36,7 @@ p
     span
       color: map-get($palette, 'clr-primary-8')
     h1
-      font-size: 2.5rem
+      font-size: 3rem
       font-family: 'Anton', 'sans-serif'
 
 .waves
@@ -73,59 +74,70 @@ p
 // About Section
 
 .section-about
-  margin: 5rem 2rem
-  text-align: center
+  margin: 10rem 2rem
   p
-    max-width: 36rem
+    max-width: 40rem
   img
     width: 100%
     height: auto
-    max-width: 400px
+    max-width: 500px
 
 // Work Section
 
 .section-work
+  margin-bottom: 5rem
   h3
     margin-top: 0
     font-weight: 700
+    font-size: 1.5rem
   img
     width: 100%
     height: auto
   .project-btn
-    background: map-get($palette, 'clr-primary-2')
+    color: map-get($palette, 'clr-grey-2')
     font-weight: 600
+    transition: padding-left 0.5s ease
+  .project-btn:hover
+    background: map-get($palette, 'clr-black') !important
+    color: map-get($palette, 'clr-white') !important
+    padding-left: 1.5rem
 
 // Services Section
 
 .section-services
-  background: map-get($palette, 'clr-primary-2')
-  height: fit-content
-  margin: 0
+  margin: 7rem 0
   img
     width: 100%
-    height: 250px
-  .card-container
-    position: relative
-    top: 2.6rem
+    height: 300px
   .service-card
-    border-radius: 0
-    max-width: 25rem
-  .first-card
-    border-radius: 10px 10px 0 0
-  .last-card
-    border-radius: 0 0 10px 10px
+    height: 100%
+    transition: transform 0.5s ease
+  .service-card:hover
+    cursor: pointer
+    transform: translateY(-1rem)
 
-@media screen and (min-width: 768px)
-  .section-services
-    .first-card
-      border-radius: 10px 0 0 10px
-    .last-card
-      border-radius: 0 10px 10px 0
+// Section Contact
+
+.section-contact
+  background: linear-gradient(112deg, map-get($palette, 'clr-grey-2') 0%, map-get($palette, 'clr-primary-2') 100%)
+  h2
+    color: map-get($palette, 'clr-white')
+    font-size: 3rem
+  p
+    color: map-get($palette, 'clr-grey-9')
+  .contact-btn
+    background: map-get($palette, 'clr-white')
+    color: map-get($palette, 'clr-grey-2')
+    font-weight: 700
+    transition: padding-left 0.5s ease
+  .contact-btn:hover
+    background: map-get($palette, 'clr-black')
+    color: map-get($palette, 'clr-white')
+    padding-left: 3rem
 
 
-@media screen and (min-width: 1014px)
+@media screen and (min-width: 1172px)
   .hero-info
     h1
-      text-align: start
       font-size: 4rem !important
 

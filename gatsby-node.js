@@ -40,38 +40,3 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
-// const path = require('path');
-//
-// exports.createPages = async ({ reporter, actions, graphql }) => {
-//   const { createPage } = actions;
-//   const blogTemplate = path.resolve('src/templates/post/post.js');
-//
-//   // Query our blog posts
-//   const result = await graphql(`
-//     {
-//       posts: allPrismicArticle {
-//         edges {
-//           node {
-//             id
-//             uid
-//           }
-//         }
-//       }
-//     }
-//   `);
-//
-//   if (result.errors) {
-//     reporter.panic(result.errors);
-//   }
-//
-//   result.data.posts.edges.forEach(({ node }) => {
-//     // Create a page for each blog post
-//     createPage({
-//       path: `/blog/${node.uid}`,
-//       component: blogTemplate,
-//       context: {
-//         id: node.id,
-//       },
-//     });
-//   });
-// };
