@@ -1,15 +1,17 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
-import projects_data from '../data/projects'
 import firebase from '../firebase/firebaseConfig'
+import cocktail_project from '../images/cocktail_project.png'
+import grocerybud_project from '../images/grocerybud_project.png'
+import cart_project from '../images/cart_project.png'
 
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [dropdown, setDropdown] = useState(false)
-  const projects = projects_data
   const [person, setPerson] = useState({ name: '', email: '', message: '' })
   const [scrolled, setScrolled] = useState(false)
   const [offset, setOffset] = useState(0)
+  const [project, setProject] = useState(cocktail_project)
   const submitSuccess = useRef(null)
 
   const handleScroll = () => {
@@ -18,6 +20,18 @@ const AppProvider = ({ children }) => {
       setScrolled(true)
     } else {
       setScrolled(false)
+    }
+  }
+
+  const changeProject = (e) => {
+    e.preventDefault()
+    const name = e.target.value
+    if (name === 'cocktaildb') {
+      setProject(cocktail_project)
+    } else if (name === 'grocerybud') {
+      setProject(grocerybud_project)
+    } else if (name === 'cart') {
+      setProject(cart_project)
     }
   }
 
@@ -78,10 +92,11 @@ const AppProvider = ({ children }) => {
         dropdown,
         openDropdown,
         closeDropdown,
-        projects,
         person,
         scrolled,
         submitSuccess,
+        project,
+        changeProject,
         handleChange,
         handleSubmit,
       }}

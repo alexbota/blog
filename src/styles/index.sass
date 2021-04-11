@@ -9,7 +9,8 @@ $hover-color: rgba(220, 120, 150, 1)
 
 .section-about,
 .section-work,
-.section-services
+.section-services,
+.section-tech
   h2
     font-size: 2.5rem
     font-weight: 700
@@ -24,6 +25,7 @@ p
 // Hero
 
 .section-hero
+  margin-bottom: 5rem
   position: relative
   height: 550px
   background: map-get($palette, 'clr-primary-2')
@@ -36,7 +38,7 @@ p
     span
       color: map-get($palette, 'clr-primary-8')
     h1
-      font-size: 3rem
+      font-size: 2.5rem
       font-family: 'Anton', 'sans-serif'
 
 .waves
@@ -74,7 +76,6 @@ p
 // About Section
 
 .section-about
-  margin: 10rem 2rem
   p
     max-width: 40rem
   img
@@ -82,30 +83,21 @@ p
     height: auto
     max-width: 500px
 
-// Work Section
+// Projects Section
 
-.section-work
-  margin-bottom: 5rem
-  h3
-    margin-top: 0
-    font-weight: 700
-    font-size: 1.5rem
-  img
-    width: 100%
-    height: auto
+.section-projects
+  margin-bottom: 8rem
+  max-height: 700px
   .project-btn
     color: map-get($palette, 'clr-grey-2')
     font-weight: 600
-    transition: padding-left 0.5s ease
+    transition: color 0.5s ease
   .project-btn:hover
-    background: map-get($palette, 'clr-black') !important
-    color: map-get($palette, 'clr-white') !important
-    padding-left: 1.5rem
+    color: map-get($palette, 'clr-grey-8')
 
 // Services Section
 
 .section-services
-  margin: 7rem 0
   img
     width: 100%
     height: 300px
@@ -116,6 +108,18 @@ p
     cursor: pointer
     transform: translateY(-1rem)
 
+//Technologies Section
+
+.section-tech
+  .tech-stack
+    max-width: 1050px
+    text-align: center
+    .tech-icon
+      font-size: 2.5rem
+    p
+      font-size: 1rem
+      margin: 0
+
 // Section Contact
 
 .section-contact
@@ -125,6 +129,8 @@ p
     font-size: 3rem
   p
     color: map-get($palette, 'clr-grey-9')
+  a
+    text-decoration: none
   .contact-btn
     background: map-get($palette, 'clr-white')
     color: map-get($palette, 'clr-grey-2')
@@ -135,9 +141,12 @@ p
     color: map-get($palette, 'clr-white')
     padding-left: 3rem
 
-
-@media screen and (min-width: 1172px)
+@media screen and (min-width: 768px)
   .hero-info
     h1
       font-size: 4rem !important
+
+@media screen and (min-width: 992px)
+  .service-card
+    max-width: 25rem
 
