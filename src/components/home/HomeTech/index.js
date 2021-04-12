@@ -1,12 +1,13 @@
 import React from 'react'
-import contenful from '../../../images/contentful.svg'
-import gatsby from '../../../images/gatsby.svg'
-import react from '../../../images/react.svg'
-import aws from '../../../images/aws.svg'
-import graphql from '../../../images/graphql.svg'
-import netlify from '../../../images/netlify.svg'
-import prismic from '../../../images/prismic.svg'
-import nodejs from '../../../images/nodejs-icon.svg'
+// import assets
+import contenful_icon from '../../../images/contentful.svg'
+import gatsby_icon from '../../../images/gatsby.svg'
+import react_icon from '../../../images/react.svg'
+import aws_icon from '../../../images/aws.svg'
+import graphql_icon from '../../../images/graphql.svg'
+import netlify_icon from '../../../images/netlify.svg'
+import prismic_icon from '../../../images/prismic.svg'
+import nodejs_icon from '../../../images/nodejs-icon.svg'
 
 const HomeTech = () => {
   return (
@@ -36,137 +37,91 @@ const HomeTech = () => {
         </p>
       </div>
       <div className="tech-stack p-grid p-jc-center p-ai-center">
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://reactjs.org/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={react}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>ReactJS</p>
-            <p>#1 Frontend ecosystem</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://www.gatsbyjs.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={gatsby}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>GatsbyJS</p>
-            <p>Great for static site generation with React</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://prismic.io/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={prismic}
-              style={{ maxWidth: '100px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>Prismic</p>
-            <p>the headless CMS preferred by content creators</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://www.contentful.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={contenful}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>Contentful</p>
-            <p>the headless CMS preferred by enterprises</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://nodejs.org/en/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={nodejs}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>NodeJS</p>
-            <p>Best serverless support</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://graphql.org/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={graphql}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>GraphQL</p>
-            <p>the future of APIs</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://www.netlify.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={netlify}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>Netlify</p>
-            <p>the most hands-off hosting solution</p>
-          </a>
-        </div>
-        <div className="p-col-6 p-md-3 p-jc-center p-ai-center">
-          <a
-            style={{ textDecoration: 'none' }}
-            href="https://aws.amazon.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img
-              src={aws}
-              style={{ maxWidth: '50px', width: '100%' }}
-              alt="Powered by Contentful"
-            />
-            <p>AWS</p>
-            <p>Most versatile cloud service</p>
-          </a>
-        </div>
+        {technologies.map((tech) => {
+          return (
+            <div
+              key={tech.id}
+              className="p-col-6 p-md-3 p-jc-center p-ai-center"
+            >
+              <a
+                style={{ textDecoration: 'none' }}
+                href={tech.url}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img
+                  src={tech.image}
+                  style={{ width: '100%', maxWidth: '50px' }}
+                  alt={tech.technology}
+                />
+                <p>{tech.technology}</p>
+                <p>{tech.description}</p>
+              </a>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
 }
 
 export default HomeTech
+
+const technologies = [
+  {
+    id: 1,
+    technology: 'React',
+    description: '#1 Frontend ecosystem',
+    image: react_icon,
+    url: 'https://reactjs.org/',
+  },
+  {
+    id: 2,
+    technology: 'GatsbyJS',
+    description: 'Great for static site generation with React',
+    image: gatsby_icon,
+    url: 'https://www.gatsbyjs.com/',
+  },
+  {
+    id: 3,
+    technology: 'Prismic',
+    description: 'the headless CMS preferred by content creators',
+    image: prismic_icon,
+    url: 'https://prismic.io/',
+  },
+  {
+    id: 4,
+    technology: 'Contentful',
+    description: 'the headless CMS preferred by enterprises',
+    image: contenful_icon,
+    url: 'https://www.contentful.com/',
+  },
+  {
+    id: 5,
+    technology: 'NodeJS',
+    description: 'Best serverless support',
+    image: nodejs_icon,
+    url: 'https://nodejs.org/en/',
+  },
+  {
+    id: 6,
+    technology: 'GraphQL',
+    description: 'the future of APIs',
+    image: graphql_icon,
+    url: 'https://graphql.org/',
+  },
+  {
+    id: 7,
+    technology: 'Netlify',
+    description: 'the most hands-off hosting solution',
+    image: netlify_icon,
+    url: 'https://www.netlify.com/',
+  },
+  {
+    id: 8,
+    technology: 'AWS',
+    description: 'Most versatile cloud service',
+    image: aws_icon,
+    url: 'https://aws.amazon.com/',
+  },
+]

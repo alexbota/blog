@@ -6,7 +6,7 @@ import DefaultLayout from '../components/layouts'
 // import SEO
 import SEO from '../components/seo'
 // import components
-import ArticleDetail from '../components/articleDetail'
+import ArticleDetail from '../components/blog/articleDetail'
 
 class Post extends Component {
   render() {

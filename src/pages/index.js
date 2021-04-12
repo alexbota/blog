@@ -14,6 +14,7 @@ import HomeProjects from '../components/home/HomeProjects'
 import HomeServices from '../components/home/HomeServices'
 import HomeContact from '../components/home/HomeContact'
 import HomeTech from '../components/home/HomeTech'
+import HomeWorkflow from '../components/home/HomeWorkflow'
 import { Divider } from 'primereact/divider'
 
 const IndexPage = () => {
@@ -36,6 +37,8 @@ const IndexPage = () => {
       <HomeAbout />
       <Divider />
       <HomeServices />
+      <Divider />
+      <HomeWorkflow />
       <Divider />
       <HomeTech />
       <HomeContact />

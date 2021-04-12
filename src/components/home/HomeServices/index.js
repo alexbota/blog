@@ -6,7 +6,7 @@ import undraw_slider from '../../../images/undraw_slider.svg'
 import undraw_progressive_app from '../../../images/undraw_progressive_app.svg'
 
 const HomeServices = () => {
-  const header1 = (
+  const header_one = (
     <img
       alt="illustration"
       src={undraw_pen}
@@ -16,7 +16,7 @@ const HomeServices = () => {
     />
   )
 
-  const header2 = (
+  const header_two = (
     <img
       alt="illustration"
       src={undraw_progressive_app}
@@ -26,7 +26,7 @@ const HomeServices = () => {
     />
   )
 
-  const header3 = (
+  const header_three = (
     <img
       alt="illustration"
       src={undraw_slider}
@@ -53,7 +53,11 @@ const HomeServices = () => {
       </div>
       <div className="p-grid">
         <div className="p-col-12 p-lg-4 p-mb-2">
-          <Card className="service-card" title="UI/UX Design" header={header1}>
+          <Card
+            className="service-card"
+            title="UI/UX Design"
+            header={header_one}
+          >
             <p>
               UI & UX involves planning and iterating a site's structure and
               layout. Once the proper information architecture is in place, I
@@ -68,7 +72,7 @@ const HomeServices = () => {
           <Card
             className="service-card"
             title="Web Application Development"
-            header={header2}
+            header={header_two}
           >
             <p>
               Create transformative web based digital products with me. Backend,
@@ -82,7 +86,7 @@ const HomeServices = () => {
           <Card
             className="service-card"
             title="Premium Website Development"
-            header={header3}
+            header={header_three}
           >
             <p>
               When you want a tailor-made website with maximum flexibility and a

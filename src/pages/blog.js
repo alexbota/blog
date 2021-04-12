@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 // import graphql
 import { graphql } from 'gatsby'
 // import components
-import Article from '../components/article'
+import Article from '../components/blog/article'
 
 const Blog = (props) => {
   return (
