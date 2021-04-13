@@ -24,7 +24,7 @@ const ContactForm = () => {
       <Card
         className="p-mx-3"
         style={{ maxWidth: '500px' }}
-        title="Let's talk about you project."
+        title="Let's talk about your project."
       >
         <Toast className="submit-toast" ref={submitSuccess} />
         <form className="p-fluid p-formgrid p-grid" onSubmit={handleSubmit}>
