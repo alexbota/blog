@@ -5,12 +5,12 @@ import { useGlobalContext } from '../../../context/GlobalContextProvider'
 import Laptop from '../../shared/Laptop'
 
 const HomeProjects = () => {
-  const { project, changeProject } = useGlobalContext()
+  const { work, changeProject } = useGlobalContext()
 
   return (
     <section className="section-projects">
-      <Laptop url={project} />
-      <div className="buttons p-d-flex p-jc-center p-mt-4">
+      <Laptop url={work} />
+      <div className="buttons p-d-flex p-flex-column p-flex-md-row p-jc-center p-mt-4">
         <button
           value="cocktaildb"
           className="btn project-btn p-mx-4"

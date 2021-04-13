@@ -28,7 +28,7 @@ p
 .section-hero
   margin-bottom: 5rem
   position: relative
-  height: 700px
+  height: 550px
   background: map-get($palette, 'clr-primary-2')
   overflow: hidden
   .hero-info
@@ -104,10 +104,6 @@ p
     height: 300px
   .service-card
     height: 100%
-    transition: transform 0.5s ease
-  .service-card:hover
-    cursor: pointer
-    transform: translateY(-1rem)
 
 //Technologies Section
 
@@ -121,26 +117,11 @@ p
       font-size: 1rem
       margin: 0
 
-// Section Contact
+//Contact Section
 
 .section-contact
-  background: linear-gradient(112deg, map-get($palette, 'clr-grey-2') 0%, map-get($palette, 'clr-primary-2') 100%)
-  h2
-    color: map-get($palette, 'clr-white')
-    font-size: 3rem
-  p
-    color: map-get($palette, 'clr-grey-9')
-  a
-    text-decoration: none
-  .contact-btn
-    background: map-get($palette, 'clr-white')
-    color: map-get($palette, 'clr-grey-2')
-    font-weight: 700
-    transition: padding-left 0.5s ease
-  .contact-btn:hover
-    background: map-get($palette, 'clr-black')
-    color: map-get($palette, 'clr-white')
-    padding-left: 3rem
+  height: 800px
+  background: linear-gradient(112deg, map-get($palette, 'clr-primary-2') 0%, map-get($palette, 'clr-primary-6') 100%)
 
 @media screen and (min-width: 768px)
   .hero-info

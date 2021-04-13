@@ -28,7 +28,7 @@ const HomeWorkflow = () => {
             <div className="timeline__event__content ">
               <div className="timeline__event__title">Clarify the vision</div>
               <div className="timeline__event__description">
-                <p>Create specs and get an estimate</p>
+                <p>Create specs and get an estimate.</p>
               </div>
             </div>
           </div>
@@ -41,13 +41,12 @@ const HomeWorkflow = () => {
             <div className="timeline__event__date">Prototype</div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                Create a clickable prototype
+                Creation of a clickable prototype
               </div>
               <div className="timeline__event__description">
                 <p>
-                  Design delightful user experiences for your website and
-                  applications. Improve your business metrics through beautiful
-                  interfaces and software your customers love.
+                  A working website is not enough - it also needs to look great
+                  and provide to your visitors a great experience.
                 </p>
               </div>
             </div>
@@ -60,9 +59,14 @@ const HomeWorkflow = () => {
             </div>
             <div className="timeline__event__date">Kickoff</div>
             <div className="timeline__event__content">
-              <div className="timeline__event__title">The big game</div>
+              <div className="timeline__event__title">
+                I'm ready to help you
+              </div>
               <div className="timeline__event__description">
-                <p>Get to know the tools and the process</p>
+                <p>
+                  Regardless of whether you need to plan an idea for a new
+                  website or audit the quality of an existing one.
+                </p>
               </div>
             </div>
           </div>
@@ -95,13 +99,10 @@ const HomeWorkflow = () => {
             <div className="timeline__event__date">Maintenance</div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                Keep your app up-to-date and secure.{' '}
+                Keep your app up-to-date and secure.
               </div>
               <div className="timeline__event__description">
-                <p>
-                  Improve it based on user feedback Keep your app up-to-date and
-                  secure. Improve it based on user feedback
-                </p>
+                <p>Improve it based on user feedback.</p>
               </div>
             </div>
           </div>

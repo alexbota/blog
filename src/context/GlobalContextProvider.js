@@ -8,10 +8,15 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [dropdown, setDropdown] = useState(false)
-  const [person, setPerson] = useState({ name: '', email: '', message: '' })
+  const [person, setPerson] = useState({
+    name: '',
+    email: '',
+    message: '',
+    project: '',
+  })
   const [scrolled, setScrolled] = useState(false)
   const [offset, setOffset] = useState(0)
-  const [project, setProject] = useState(cocktail_project)
+  const [work, setWork] = useState(cocktail_project)
   const submitSuccess = useRef(null)
 
   const handleScroll = () => {
@@ -27,11 +32,11 @@ const AppProvider = ({ children }) => {
     e.preventDefault()
     const name = e.target.value
     if (name === 'cocktaildb') {
-      setProject(cocktail_project)
+      setWork(cocktail_project)
     } else if (name === 'grocerybud') {
-      setProject(grocerybud_project)
+      setWork(grocerybud_project)
     } else if (name === 'cart') {
-      setProject(cart_project)
+      setWork(cart_project)
     }
   }
 
@@ -61,13 +66,14 @@ const AppProvider = ({ children }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (person.name && person.email && person.message) {
+    if (person.name && person.email && person.message && person.project) {
       const messagesRef = firebase.database.ref('messages')
       const newMessageRef = messagesRef.push()
       newMessageRef.set({
         name: person.name,
         email: person.email,
         message: person.message,
+        project: person.project,
       })
       submitSuccess.current.show({
         severity: 'success',
@@ -95,7 +101,7 @@ const AppProvider = ({ children }) => {
         person,
         scrolled,
         submitSuccess,
-        project,
+        work,
         changeProject,
         handleChange,
         handleSubmit,
