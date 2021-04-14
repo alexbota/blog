@@ -22,7 +22,6 @@ const ContactForm = () => {
   return (
     <div className="p-d-flex p-jc-center">
       <Card
-        className="p-mx-3"
         style={{ maxWidth: '500px' }}
         title="Let's talk about your project."
       >
@@ -51,8 +50,8 @@ const ContactForm = () => {
             />
           </div>
           <div className="p-field p-col-12">
-            <h4>Project</h4>
-            <div className="p-formgroup-inline">
+            <p>Product</p>
+            <div className="p-formgroup-inline" role="radiogroup">
               <div className="p-field-checkbox">
                 <RadioButton
                   required

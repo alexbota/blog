@@ -4,43 +4,28 @@
 .navbar
   font-weight: 500
   position: fixed
+  height: 80px
   top: 0
   z-index: 10
   width: 100vw
   font-size: 18px
-  background: rgba(map-get($palette, 'clr-grey-2'), 0.98)
-  a
-    color: map-get($palette, 'clr-white')
-  button
-    color: map-get($palette, 'clr-white')
-
-.navbar-active
   background: rgba(map-get($palette, 'clr-white'), 0.95)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
   a
     color: map-get($palette, 'clr-black')
   button
     color: map-get($palette, 'clr-black')
+  transition: height 0.7s ease
 
+.navbar-active
+  height: 60px
 
 .main-nav
   list-style-type: none
   display: none
-  animation: growOut 300ms ease-in-out forwards
-  transform-origin: top center
-
-@keyframes growOut
-  0%
-    transform: scale(0)
-  80%
-    transform: scale(1.1)
-  100%
-    transform: scale(1)
 
 .nav-links
   text-decoration: none
-  //color: map-get($palette, 'clr-black')
-
 .nav-links:hover
   border-bottom: 2px solid map-get($palette, 'clr-grey-5')
   color: map-get($palette, 'clr-grey-5')
@@ -59,23 +44,16 @@
 
 .navbar-toggle
   position: absolute
-  top: 10px
   right: 20px
   cursor: pointer
   color: #000
   font-size: 24px
-
-.active
-  display: block
-  button
-    color: map-get($palette, 'clr-white')
 
 @media screen and (min-width: 768px)
   .navbar
     display: flex
     justify-content: space-between
     padding-bottom: 0
-    height: 70px
     align-items: center
 
   .main-nav
@@ -92,5 +70,3 @@
 
   .navbar-toggle
     display: none
-
-

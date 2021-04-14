@@ -1,6 +1,4 @@
 import React from 'react'
-// import context
-import { useGlobalContext } from '../context/GlobalContextProvider'
 // import layouts
 import DefaultLayout from '../components/layouts'
 // import styles
@@ -18,9 +16,8 @@ import HomeContact from '../components/home/HomeContact'
 import { Divider } from 'primereact/divider'
 
 const IndexPage = () => {
-  const { scrolled } = useGlobalContext()
   return (
-    <DefaultLayout scrolled={scrolled}>
+    <DefaultLayout>
       <SEO
         title="Alex Bota | Front-end Developer React"
         keywords={[
@@ -41,6 +38,7 @@ const IndexPage = () => {
       <HomeWorkflow />
       <Divider />
       <HomeTech />
+      <Divider />
       <HomeContact />
     </DefaultLayout>
   )

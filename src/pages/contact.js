@@ -12,8 +12,8 @@ const Contact = () => {
   return (
     <DefaultLayout>
       <SEO title="Alex Bota | Contact" />
-      <section className="contact p-grid p-jc-center p-mx-3">
-        <div style={{ maxWidth: '650px' }} className="p-col-12 p-lg-6 p-mb-5">
+      <section className="contact p-grid p-jc-center p-mx-3 p-mx-md-6">
+        <div className="p-col-12 p-lg-6 p-mb-5">
           <h1>Web development and design services.</h1>
           <p>
             My passion is to see clients reach their business goals using
@@ -25,6 +25,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </section>
+      <section></section>
     </DefaultLayout>
   )
 }

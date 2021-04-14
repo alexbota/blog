@@ -53,6 +53,8 @@ const HomeTech = () => {
                   src={tech.image}
                   style={{ width: '100%', maxWidth: '50px' }}
                   alt={tech.technology}
+                  width="100"
+                  height="100"
                 />
                 <p>{tech.technology}</p>
                 <p>{tech.description}</p>

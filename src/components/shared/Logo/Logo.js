@@ -4,9 +4,8 @@ import LogoSvg from '../../../images/Logo.svg'
 
 // styles
 const logoStyles = {
-  display: 'inline-block',
+  display: 'flex',
   fontSize: '22px',
-  marginTop: '10px',
   marginLeft: '20px',
 }
 

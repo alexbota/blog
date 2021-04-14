@@ -9,10 +9,10 @@ import '../../styles/global.sass'
 import Navbar from '../shared/Navbar'
 import Footer from '../shared/Footer'
 
-const DefaultLayout = ({ children, scrolled }) => {
+const DefaultLayout = ({ children }) => {
   return (
     <>
-      <Navbar scrolled={scrolled} />
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </>
