@@ -24,6 +24,7 @@ const Navbar = () => {
       >
         <span className="navbar-toggle">
           <Button
+            aria-label="open navbar"
             icon="pi pi-bars"
             onClick={(e) => setVisibleLeft(true)}
             className="p-button-text"
