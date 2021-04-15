@@ -8,7 +8,6 @@ import SEO from '../components/seo'
 // import components
 import HomeHero from '../components/home/HomeHero'
 import HomeAbout from '../components/home/HomeAbout'
-import HomeProjects from '../components/home/HomeProjects'
 import HomeServices from '../components/home/HomeServices'
 import HomeTech from '../components/home/HomeTech'
 import HomeWorkflow from '../components/home/HomeWorkflow'
@@ -29,8 +28,6 @@ const IndexPage = () => {
         ]}
       />
       <HomeHero />
-      <HomeProjects />
-      <Divider />
       <HomeAbout />
       <Divider />
       <HomeServices />

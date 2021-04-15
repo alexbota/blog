@@ -83,11 +83,22 @@
 .viewport:hover
   background-position: 0 100%
 
-.macbook,
-.viewport:after
-  background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent)
-  bottom: 0
-  content: ""
-  left: 0
-  right: 0
-  top: 0
+.macbook
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    opacity: 0
+    transition: all 0.3s linear
+
+  .activeSlide
+    opacity: 1
+    transform: translateX(0)
+
+  .lastSlide
+    transform: translateX(-100%)
+
+  .nextSlide
+    transform: translateX(100%)
+

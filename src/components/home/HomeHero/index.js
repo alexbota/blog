@@ -1,9 +1,10 @@
 import React from 'react'
+import Laptop from '../../shared/Laptop'
 
 const HomeHero = () => {
   return (
-    <section className="section-hero p-d-flex p-flex-column p-jc-center p-ai-center">
-      <div className="hero-info">
+    <section className="section-hero">
+      <div className="hero-info p-d-flex p-flex-column p-jc-center p-ai-center p-mx-3">
         <h1>
           Freelance Web Developer & Designer
           <br /> in Milan
@@ -13,7 +14,7 @@ const HomeHero = () => {
           companies to succeed
         </h2>
       </div>
-      <div className="waves"></div>
+      <Laptop />
     </section>
   )
 }

@@ -10,18 +10,11 @@ import { Sidebar } from 'primereact/sidebar'
 import { Button } from 'primereact/button'
 
 const Navbar = () => {
-  const { scrolled, visibleLeft, setVisibleLeft } = useGlobalContext()
+  const { visibleLeft, setVisibleLeft } = useGlobalContext()
 
   return (
     <>
-      <nav
-        className={
-          scrolled
-            ? 'navbar  navbar-active p-d-flex p-ai-center'
-            : 'navbar p-d-flex p-ai-center'
-        }
-        role="presentation"
-      >
+      <nav className="navbar p-d-flex p-ai-center" role="presentation">
         <span className="navbar-toggle">
           <Button
             aria-label="open navbar"
@@ -53,7 +46,7 @@ const Navbar = () => {
         <ul>
           <li>
             <Link
-              style={{ fontSize: '1.2rem' }}
+              style={{ fontSize: '1.5rem' }}
               to="/"
               className="nav-links"
               onClick={() => setVisibleLeft(false)}
@@ -63,7 +56,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              style={{ fontSize: '1.2rem' }}
+              style={{ fontSize: '1.5rem' }}
               to="/blog"
               className="nav-links"
               onClick={() => setVisibleLeft(false)}
@@ -73,7 +66,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              style={{ fontSize: '1.2rem' }}
+              style={{ fontSize: '1.5rem' }}
               to="/contact"
               className="nav-links"
               onClick={() => setVisibleLeft(false)}

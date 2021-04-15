@@ -22,16 +22,15 @@ p
 // Hero
 
 .section-hero
-  margin-bottom: 5rem
   position: relative
-  height: 700px
   background: map-get($palette, 'clr-grey-2')
   overflow: hidden
   .hero-info
+    margin-top: 8rem
+    margin-bottom: 6rem
     text-align: center
     z-index: 1
     color: map-get($palette, 'clr-white')
-    max-width: 80vw
     span
       color: map-get($palette, 'clr-primary-8')
     h1
@@ -47,12 +46,6 @@ p
     width: 100%
     height: auto
     max-width: 500px
-
-// Projects Section
-
-.section-projects
-  margin-bottom: 8rem
-  max-height: 700px
 
 // Services Section
 
@@ -76,9 +69,11 @@ p
       margin: 0
 
 @media screen and (min-width: 768px)
-  .hero-info
-    h1
-      font-size: 4rem !important
+  .section-hero
+    .hero-info
+      margin-top: 15rem
+      h1
+        font-size: 4rem !important
 
 @media screen and (min-width: 992px)
   .service-card

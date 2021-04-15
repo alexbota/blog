@@ -55,35 +55,38 @@ const ContactForm = () => {
               <div className="p-field-checkbox">
                 <RadioButton
                   required
-                  inputId="project1"
-                  name="project"
-                  value="Website"
+                  inputId="product1"
+                  aria-labelledby="product1"
+                  name="product"
+                  value="website"
                   onChange={handleChange}
-                  checked={person.project === 'Website'}
+                  checked={person.product === 'website'}
                 />
-                <label htmlFor="project1">Website</label>
+                <label htmlFor="product1">Website</label>
               </div>
               <div className="p-field-checkbox">
                 <RadioButton
                   required
-                  inputId="project2"
-                  name="project"
-                  value="Web Application"
+                  inputId="product2"
+                  aria-labelledby="product1"
+                  name="product"
+                  value="web application"
                   onChange={handleChange}
-                  checked={person.project === 'Web Application'}
+                  checked={person.product === 'web application'}
                 />
-                <label htmlFor="project2">Web Application</label>
+                <label htmlFor="product2">Web Application</label>
               </div>
               <div className="p-field-checkbox">
                 <RadioButton
                   required
-                  inputId="project3"
-                  name="project"
-                  value="Other"
+                  inputId="product3"
+                  aria-labelledby="product3"
+                  name="product"
+                  value="other"
                   onChange={handleChange}
-                  checked={person.project === 'Other'}
+                  checked={person.product === 'other'}
                 />
-                <label htmlFor="project3">Other</label>
+                <label htmlFor="product3">Other</label>
               </div>
             </div>
           </div>
