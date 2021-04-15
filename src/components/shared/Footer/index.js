@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 // import styles
-import "./index.sass";
+import './index.sass'
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
           </li>
           <li className="p-mx-3">
-            <a href="mailto:alexbota@outlook.it">Email</a>
+            <a href="mailto:contact@alexbota.tech">Email</a>
           </li>
           <li className="p-mx-3">
             <a
@@ -31,7 +31,7 @@ const Footer = () => {
         </ul>
       </nav>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
