@@ -1,0 +1,23 @@
+.section-post
+  margin-top: 7rem
+  h1,
+  h2
+    color: map-get($palette, 'clr-black')
+  p
+    color: map-get($palette, 'clr-grey')
+  blockquote
+    font-style: italic
+    font-size: 1.25rem
+    color: map-get($palette, 'clr-grey')
+  blockquote::after
+    content: " »"
+  blockquote::before
+    content: "« "
+  a
+    text-decoration: none
+    color: map-get($palette, 'clr-black')
+  a:hover
+    color: map-get($palette, 'clr-primary-4')
+
+.post-wrapper
+  max-width: 60rem !important

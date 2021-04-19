@@ -1,4 +1,26 @@
 require('dotenv').config({ path: '.env' });
+const linkResolver = require('./src/utils/linkResolver');
+
+const reponame = process.env.GATSBY_PRISMIC_REPOSITORY_NAME || prismicRepo;
+const apiKey = process.env.GATSBY_PRISMIC_ACCESS_TOKEN || accessToken;
+
+const blogHomeSchema = require('./custom_types/bloghome.json');
+const postSchema = require('./custom_types/post.json');
+
+const gatsbySourcePrismicConfig = {
+  resolve: 'gatsby-source-prismic',
+  options: {
+    repositoryName: reponame,
+    accessToken: apiKey,
+    prismicToolbar: true,
+    linkResolver: () => (doc) => linkResolver(doc),
+    schemas: {
+      // Custom types mapped to schemas
+      blogHome: blogHomeSchema,
+      post: postSchema,
+    },
+  },
+};
 
 module.exports = {
   siteMetadata: {
@@ -9,19 +31,10 @@ module.exports = {
     siteUrl: 'https://alexbota.me/',
   },
   plugins: [
+    gatsbySourcePrismicConfig,
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-prismic',
-      options: {
-        repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
-        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
-        schemas: {
-          page: require('./custom_types/blog_post.json'),
-        },
-      },
-    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

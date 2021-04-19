@@ -1,8 +1,6 @@
 import React from 'react'
 // import layouts
 import DefaultLayout from '../components/layouts'
-// import styles
-import '../styles/index.sass'
 // import SEO
 import SEO from '../components/seo'
 // import components
@@ -27,16 +25,18 @@ const IndexPage = () => {
           `freelance web developer milano`,
         ]}
       />
-      <HomeHero />
-      <HomeAbout />
-      <Divider />
-      <HomeServices />
-      <Divider />
-      <HomeWorkflow />
-      <Divider />
-      <HomeTech />
-      <Divider />
-      <HomeContact />
+      <div className="home-wrapper">
+        <HomeHero />
+        <HomeAbout />
+        <Divider />
+        <HomeServices />
+        <Divider />
+        <HomeWorkflow />
+        <Divider />
+        <HomeTech />
+        <Divider />
+        <HomeContact />
+      </div>
     </DefaultLayout>
   )
 }

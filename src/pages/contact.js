@@ -1,8 +1,6 @@
 import React from 'react'
 // import layouts
 import DefaultLayout from '../components/layouts'
-// import styles
-import '../styles/Contact.sass'
 // import SEO
 import SEO from '../components/seo'
 // import components
@@ -15,11 +13,11 @@ const Contact = () => {
       <section className="contact p-grid p-jc-center p-mx-3 p-mx-md-6">
         <div className="p-col-12 p-lg-6 p-mb-5">
           <h1>Web development and design services.</h1>
-          <p>
+          <h4>
             My passion is to see clients reach their business goals using
             creative digital strategies. Contact me today to schedule a meeting
             and see how I can help you grow.
-          </p>
+          </h4>
         </div>
         <div className="p-col-12 p-lg-6">
           <ContactForm />
