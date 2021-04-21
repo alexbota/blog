@@ -119,10 +119,12 @@ const Post = ({ data }) => {
   if (!data) return null
   // Define the Post content returned from Prismic
   const post = data.prismicPost.data
-
   return (
     <DefaultLayout>
-      <SEO title={`Alex Bota | Blog`} keywords={[`blog`]} />
+      <SEO
+        title={`Alex Bota | ${post.title.raw[0].text}`}
+        keywords={[`blog`]}
+      />
       <PostBody blogPost={post} />
     </DefaultLayout>
   )

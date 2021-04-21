@@ -16,7 +16,7 @@ const IndexPage = () => {
   return (
     <DefaultLayout>
       <SEO
-        title="Alex Bota | Front-end Developer React"
+        title="Alex Bota | Web Developer React"
         keywords={[
           `alex bota`,
           `react web developer`,
