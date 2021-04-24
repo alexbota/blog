@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "dotenv": "^8.2.0",
     "firebase": "^8.3.1",
     "gatsby": "^3.1.1",

@@ -23,7 +23,6 @@ const Contact = () => {
           <ContactForm />
         </div>
       </section>
-      <section></section>
     </DefaultLayout>
   )
 }
