@@ -5,6 +5,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const pages = await graphql(`
     {
+      allPrismicBloghome {
+        nodes {
+          url
+          type
+          lang
+        }
+      }
       allPrismicPost {
         nodes {
           id
@@ -17,10 +24,18 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
+  pages.data.allPrismicBloghome.nodes.forEach((page) => {
+    createPage({
+      path: page.url,
+      component: path.resolve(__dirname, 'src/templates/Blog.js'),
+      context: { ...page },
+    });
+  });
+
   pages.data.allPrismicPost.nodes.forEach((page) => {
     createPage({
       path: page.url,
-      component: path.resolve(__dirname, 'src/templates/post.js'),
+      component: path.resolve(__dirname, 'src/templates/Post.js'),
       context: { ...page },
     });
   });

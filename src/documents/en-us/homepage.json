@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Freelance Web Developer & Designer in Milan",
+    "subtitle": "I build websites which enable companies to succeed"
+  },
+  "about": {
+    "title": "Grow your business with a fast, SEO-friendly, inclusive website",
+    "description": "I specialize in helping businesses integrate design and technology to better serve customers, extend online reach, and increase revenue. If you are a business seeking a website to stand out from the competition, let's work together."
+  },
+  "services": {
+    "title": "I provide everything you need for your perfect website",
+    "description": "The web is changing rapidly and with it the possibilities to implement websites and web applications. Using the modern JAMStack philosophy and using tools like Static Site Generators, Headless CMS and a serverless architecture make it possible to create modern, state of the art web experiences.",
+    "list": {
+      "design": {
+        "title": "UI/UX Design",
+        "description": "UI & UX involves planning and iterating a site's structure and layout. Once the proper information architecture is in place, I design the visual layer to create an optimal user experience. Receive high fidelity designs, clickable prototypes, optionally also complete specifications with estimates and implementation proposal."
+      },
+      "webapp": {
+        "title": "Web Application Development",
+        "description": "Create transformative web based digital products with me. Backend, data, cloud and frontend - I do it all top notch. I listen to and prototype your ideas. I love doing this and I'm curious about what you want to build."
+      },
+      "website": {
+        "title": "Premium Website Development",
+        "description": "When you want a tailor-made website with maximum flexibility and a unique experience aimed at maximum SEO, speed and reliability. I specialize in creating statically generated websites with React - served from CDNs - to deliver your content milliseconds faster than the competition and score high on relevant performance metrics."
+      }
+    }
+  },
+  "workflow": {
+    "title": "I deploy agile products on demand. Work with you to design, build, ship and scale your website in the most efficient way. Here’s my workflow.",
+    "list": {
+      "workshop": {
+        "title": "Workshop",
+        "subtitle": "Clarify the vision",
+        "description": "Create specs and get an estimate."
+      },
+      "prototype": {
+        "title": "Prototype",
+        "subtitle": "Creation of a clickable prototype",
+        "description": "A working website is not enough - it also needs to look great and provide to your visitors a great experience."
+      },
+      "kickoff": {
+        "title": "Kickoff",
+        "subtitle": "Ready to build your idea",
+        "description": "Learn about the technologies that will help your idea become a reality and get an insight of how your built is going to work."
+      },
+      "develop": {
+        "title": "Develop",
+        "subtitle": "See your product come alive in demos",
+        "description": "Create user-friendly, beautiful, fast and secure applications that meet the needs of your business goals and clients personas."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "subtitle": "Keep your App up-to-date and secure",
+        "description": "Improve it based on user feedback."
+      }
+    }
+  },
+  "tech": {
+    "title": "Technologies I use",
+    "description": "JAMstack technologies I use to push your business forward. Until recently, creating dynamic websites with tools like Wordpress was common practice. Compared to modern technologies though, today this approach oftentimes seems inflexible and clunky, especially regarding the performance of the resulting website. Javascript libraries like React and modern Front End Frameworks like Next.js or Gatsby allow for the creation of static assets (or server side rendering) with all the possibilities dynamic web apps offer. So you'll get the best of both worlds. That entails a range of advantages, especially regarding the performance, the flexibility, the security, the scalability and the costs of the resulting website. All while content creators - through the integration of a Headless CMS like Prismic or Contentful - have the possibility, to flexibly adjust all of the content based on their requirements.",
+    "list": {
+      "react": "#1 Frontend ecosystem",
+      "gatsbyjs": "Great for static site generation with React",
+      "prismic": "the headless CMS preferred by content creators",
+      "contentful": "the headless CMS preferred by enterprises",
+      "nodejs": "Best serverless support",
+      "graphql": "the future of APIs",
+      "netlify": "the most hands-off hosting solution",
+      "aws": "Most versatile cloud service"
+    }
+  }
+}

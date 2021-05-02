@@ -9,10 +9,10 @@ import '../../styles/global.sass'
 import Navbar from '../shared/Navbar'
 import Footer from '../shared/Footer'
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, activeDocMeta }) => {
   return (
     <>
-      <Navbar />
+      <Navbar activeDocMeta={activeDocMeta} />
       <main>{children}</main>
       <Footer />
     </>

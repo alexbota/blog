@@ -8,8 +8,8 @@ import { ImageCaption, Quote, Text } from '../components/blog/slices'
 
 // Query for the blog Post content in Prismic
 export const query = graphql`
-  query BlogPostQuery($uid: String) {
-    prismicPost(uid: { eq: $uid }) {
+  query BlogPostQuery($uid: String, $lang: String) {
+    prismicPost(lang: { eq: $lang }, uid: { eq: $uid }) {
       id
       uid
       lang
@@ -92,13 +92,13 @@ const PostSlices = ({ slices }) =>
   })
 
 // Display the title, date, and content of the Post
-const PostBody = ({ blogPost }) => {
+const PostBody = ({ blogPost, activeDoc }) => {
   return (
     <article className="section-post p-d-flex p-jc-center p-mx-2">
       <div className="post-wrapper">
         <div className="container post-header">
           <div className="back">
-            <Link to="/blog">
+            <Link to={`/blog/${activeDoc.lang === 'en-us' ? '' : 'it-it'}`}>
               <i className="pi pi-angle-double-left p-mb-4" /> Back
             </Link>
           </div>
@@ -119,13 +119,21 @@ const Post = ({ data }) => {
   if (!data) return null
   // Define the Post content returned from Prismic
   const post = data.prismicPost.data
+  const { lang, type } = data.prismicPost
+  const alternateLanguages = data.prismicPost.alternate_languages || []
+  const activeDoc = {
+    lang,
+    type,
+    alternateLanguages,
+  }
   return (
-    <DefaultLayout>
+    <DefaultLayout activeDocMeta={activeDoc}>
       <SEO
         title={`Alex Bota | ${post.title.raw[0].text}`}
         keywords={[`blog`]}
+        lang={lang.slice(0, 2)}
       />
-      <PostBody blogPost={post} />
+      <PostBody blogPost={post} activeDoc={activeDoc} />
     </DefaultLayout>
   )
 }

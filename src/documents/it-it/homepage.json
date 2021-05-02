@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Web Developer & Designer freelance con sede a Milano",
+    "subtitle": "Realizzo siti web che consentono alle aziende di avere successo"
+  },
+  "about": {
+    "title": "Fai crescere la tua attività con un sito web veloce, SEO-friendly e inclusivo",
+    "description": "Sono specializzato nell'aiutare le aziende a integrare design e tecnologia per servire al meglio i loro clienti, estendere la portata online e aumentare i ricavi. Se sei un'azienda che cerca un sito web per distinguerti dalla concorrenza, lavoriamo insieme."
+  },
+  "services": {
+    "title": "Fornisco tutto ciò di cui hai bisogno per il tuo sito web perfetto",
+    "description": "Il web sta cambiando rapidamente e con esso le possibilità di implementare siti web e applicazioni web. Utilizzando la moderna filosofia JAMStack e strumenti come Generatori di siti statici, Headless CMS e un'architettura serverless, è possibile creare esperienze web moderne e all'avanguardia.",
+    "list": {
+      "design": {
+        "title": "Progettazione UI/UX",
+        "description": "L'interfaccia utente e l'esperienza utente coinvolgono la pianificazione e l'iterazione della struttura e del layout di un sito. Una volta impostata correttamente l'architettura delle informazioni, progetto il layout visivo per creare un'esperienza utente ottimale. Ricevi progetti ad alta fedeltà, prototipi cliccabili, opzionalmente anche specifiche complete con stime e proposte di implementazione."
+      },
+      "webapp": {
+        "title": "Sviluppo di applicazioni Web",
+        "description": "Crea con me prodotti digitali trasformativi basati sul web. Backend, dati, cloud e frontend: faccio tutto di prim'ordine. Ascolto e prototipo le tue idee. Mi piace farlo e sono curioso di sapere cosa vuoi costruire."
+      },
+      "website": {
+        "title": "Sviluppo di siti Web premium",
+        "description": "Quando vuoi un sito su misura con la massima flessibilità e un'esperienza unica mirata al massimo risultato SEO, velocità e affidabilità. Sono specializzato nella creazione di siti Web generati staticamente con React - servito da CDN - per fornire i tuoi contenuti millisecondi più velocemente della concorrenza e ottenere un punteggio elevato sulle metriche delle prestazioni pertinenti."
+      }
+    }
+  },
+  "workflow": {
+    "title": "Distribuisco prodotti agili su richiesta. Lavoro con te per progettare, costruire, distribuire e ridimensionare il tuo sito web nel modo più efficiente. Ecco il mio flusso di lavoro.",
+    "list": {
+      "workshop": {
+        "title": "Workshop",
+        "subtitle": "Chiarisci la visione",
+        "description": "Crea specifiche e ottieni un preventivo."
+      },
+      "prototype": {
+        "title": "Prototipo",
+        "subtitle": "Creazione di un prototipo cliccabile",
+        "description": "Un sito web funzionante non è sufficiente: deve anche avere un bell'aspetto e offrire ai tuoi visitatori un'ottima esperienza."
+      },
+      "kickoff": {
+        "title": "Kickoff",
+        "subtitle": "Pronto a costruire la tua idea",
+        "description": "Scopri le tecnologie che aiuteranno la tua idea a diventare realtà e ottieni una panoramica di come funzionerà la tua costruzione."
+      },
+      "develop": {
+        "title": "Sviluppare",
+        "subtitle": "Guarda il tuo prodotto prendere vita nelle demo",
+        "description": "Crea applicazioni facili da usare, belle, veloci e sicure che soddisfano le esigenze dei tuoi obiettivi aziendali e dei clienti."
+      },
+      "maintenance": {
+        "title": "Manutenzione",
+        "subtitle": "Mantieni la tua App aggiornata e sicura",
+        "description": "Migliorala in base al feedback degli utenti."
+      }
+    }
+  },
+  "tech": {
+    "title": "Tecnologie che utilizzo",
+    "description": "Technologie JAMStack che utilizzo per far progredire la tua attività. Fino a poco tempo fa, la creazione di siti Web dinamici con strumenti come Wordpress era pratica comune. Rispetto alle moderne technologie, però, oggi questo approccio spesso sembra poco flessibile e goffo, soprattutto per quanto riguarda le prestazioni del sito Web risultante. Le librerie Javascript come React e i moderni Framework Front End come Next.js o Gatsby consentono la creazione di risorse statiche (o rendering lato server) con tutte le possibilità offerte dalle web app dinamiche. Quindi otterrai il meglio da entrambi i mondi. Ciò comporta una serie di vantaggi, soprattutto per quanto riguarda le prestazioni, la flessibilità, la sicurezza, la scalabilità e i costi del sito web risultante. Il tutto mentre i creatori di contenuti, attraverso l'integrazione di un Headless CMS come Prismic o Contentful, hanno la possibilità di gestire tutti i contenuti in modo flessibile a loro piacere.",
+    "list": {
+      "react": "Ecosistema di frontend #1",
+      "gatsbyjs": "Ottimo per la generazione di siti statici con React",
+      "prismic": "il CMS headless preferito dai creatori di contenuti",
+      "contentful": "il CMS headless preferito dalle aziende",
+      "nodejs": "Miglior supporto serverless",
+      "graphql": "il futuro delle API",
+      "netlify": "la soluzione di hosting più pratica",
+      "aws": "Il servizio cloud più versatile"
+    }
+  }
+}

@@ -6,15 +6,11 @@ import { FcBinoculars } from 'react-icons/fc'
 import { FaCode } from 'react-icons/fa'
 import { GrHostMaintenance } from 'react-icons/gr'
 
-const HomeWorkflow = () => {
+const HomeWorkflow = ({ data }) => {
   return (
-    <section className="section-workflow p-my-6 p-mx-3">
+    <section className="home-section section-workflow p-my-6">
       <div className="p-d-flex p-jc-center">
-        <h2 style={{ maxWidth: '1050px' }}>
-          I deploy agile products on demand. Work with you to design, build,
-          ship and scale your website in the most efficient way. Here’s my
-          workflow.
-        </h2>
+        <h2>{data.title}</h2>
       </div>
       <div className="p-my-6">
         <div className="timeline">
@@ -24,11 +20,15 @@ const HomeWorkflow = () => {
                 <GrWorkshop />
               </i>
             </div>
-            <div className="timeline__event__date">Workshop</div>
+            <div className="timeline__event__date">
+              {data.list.workshop.title}
+            </div>
             <div className="timeline__event__content ">
-              <div className="timeline__event__title">Clarify the vision</div>
+              <div className="timeline__event__title">
+                {data.list.workshop.subtitle}
+              </div>
               <div className="timeline__event__description">
-                <p>Create specs and get an estimate.</p>
+                <p>{data.list.workshop.description}</p>
               </div>
             </div>
           </div>
@@ -38,16 +38,15 @@ const HomeWorkflow = () => {
                 <FaPenNib />
               </i>
             </div>
-            <div className="timeline__event__date">Prototype</div>
+            <div className="timeline__event__date">
+              {data.list.prototype.title}
+            </div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                Creation of a clickable prototype
+                {data.list.prototype.subtitle}
               </div>
               <div className="timeline__event__description">
-                <p>
-                  A working website is not enough - it also needs to look great
-                  and provide to your visitors a great experience.
-                </p>
+                <p>{data.list.prototype.description}</p>
               </div>
             </div>
           </div>
@@ -57,16 +56,15 @@ const HomeWorkflow = () => {
                 <FcBinoculars />
               </i>
             </div>
-            <div className="timeline__event__date">Kickoff</div>
+            <div className="timeline__event__date">
+              {data.list.kickoff.title}
+            </div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                I'm ready to help you
+                {data.list.kickoff.subtitle}
               </div>
               <div className="timeline__event__description">
-                <p>
-                  Regardless of whether you need to plan an idea for a new
-                  website or audit the quality of an existing one.
-                </p>
+                <p>{data.list.kickoff.description}</p>
               </div>
             </div>
           </div>
@@ -76,17 +74,15 @@ const HomeWorkflow = () => {
                 <FaCode />
               </i>
             </div>
-            <div className="timeline__event__date">Develop</div>
+            <div className="timeline__event__date">
+              {data.list.develop.title}
+            </div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                See your product come alive in demos
+                {data.list.develop.subtitle}
               </div>
               <div className="timeline__event__description">
-                <p>
-                  Create user-friendly, beautiful, fast and secure applications
-                  that meet the needs of your business goals and clients
-                  personas.
-                </p>
+                <p>{data.list.develop.description}</p>
               </div>
             </div>
           </div>
@@ -96,13 +92,15 @@ const HomeWorkflow = () => {
                 <GrHostMaintenance />
               </i>
             </div>
-            <div className="timeline__event__date">Maintenance</div>
+            <div className="timeline__event__date">
+              {data.list.maintenance.title}
+            </div>
             <div className="timeline__event__content">
               <div className="timeline__event__title">
-                Keep your app up-to-date and secure.
+                {data.list.maintenance.subtitle}
               </div>
               <div className="timeline__event__description">
-                <p>Improve it based on user feedback.</p>
+                <p>{data.list.maintenance.description}</p>
               </div>
             </div>
           </div>

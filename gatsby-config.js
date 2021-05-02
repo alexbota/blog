@@ -1,4 +1,5 @@
 require('dotenv').config({ path: '.env' });
+const { prismicRepo } = require('./prismic-configuration');
 const linkResolver = require('./src/utils/linkResolver');
 
 const reponame = process.env.GATSBY_PRISMIC_REPOSITORY_NAME || prismicRepo;
@@ -12,6 +13,7 @@ const gatsbySourcePrismicConfig = {
   options: {
     repositoryName: reponame,
     accessToken: apiKey,
+    lang: '*',
     prismicToolbar: true,
     linkResolver: () => (doc) => linkResolver(doc),
     schemas: {
@@ -35,6 +37,15 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-i18n`,
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

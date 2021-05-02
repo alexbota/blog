@@ -8,10 +8,10 @@ import { Link } from 'gatsby'
 import Logo from '../Logo/Logo'
 import { Sidebar } from 'primereact/sidebar'
 import { Button } from 'primereact/button'
+import LanguageSwitcher from '../LanguageSwitcher'
 
-const Navbar = () => {
+const Navbar = ({ activeDocMeta }) => {
   const { visibleLeft, setVisibleLeft } = useGlobalContext()
-
   return (
     <>
       <nav className="navbar p-d-flex p-ai-center" role="presentation">
@@ -26,28 +26,29 @@ const Navbar = () => {
         <Logo className="logo" />
         <ul className="main-nav">
           <li>
-            <Link to="/" className="nav-links">
+            <Link to={`${activeDocMeta.uid}`} className="nav-links">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/blog" className="nav-links">
+            <Link to={`/blog${activeDocMeta.uid}`} className="nav-links">
               Blog
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-links">
+            <Link to={`${activeDocMeta.uid}contact`} className="nav-links">
               Contact
             </Link>
           </li>
         </ul>
+        <LanguageSwitcher activeDocMeta={activeDocMeta} />
       </nav>
       <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
         <ul>
           <li>
             <Link
               style={{ fontSize: '1.5rem' }}
-              to="/"
+              to={`${activeDocMeta.uid}`}
               className="nav-links"
               onClick={() => setVisibleLeft(false)}
             >
@@ -57,7 +58,7 @@ const Navbar = () => {
           <li>
             <Link
               style={{ fontSize: '1.5rem' }}
-              to="/blog"
+              to={`/blog${activeDocMeta.uid}`}
               className="nav-links"
               onClick={() => setVisibleLeft(false)}
             >
@@ -67,7 +68,7 @@ const Navbar = () => {
           <li>
             <Link
               style={{ fontSize: '1.5rem' }}
-              to="/contact"
+              to={`${activeDocMeta.uid}contact`}
               className="nav-links"
               onClick={() => setVisibleLeft(false)}
             >

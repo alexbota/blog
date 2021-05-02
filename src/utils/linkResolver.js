@@ -1,10 +1,31 @@
+const { defaultLanguage } = require('../../prismic-configuration')
+
 // -- The Link Resolver
 // This function will be used to generate links to Prismic documents
 // As your project grows, you should update this function according to your routes
 
 const linkResolver = (doc) => {
-  if (doc.type === 'post') {
-    return `/blog/${doc.uid}`
+  const properties = doc._meta || doc
+  if (properties.type === 'homepage') {
+    return properties.lang === defaultLanguage ? '/' : `/${properties.lang}`
+  }
+
+  if (properties.type === 'contactpage') {
+    return properties.lang === defaultLanguage
+      ? '/contact'
+      : `/${properties.lang}/contact`
+  }
+
+  if (properties.type === 'bloghome') {
+    return properties.lang === defaultLanguage
+      ? '/blog'
+      : `/blog/${properties.lang}`
+  }
+
+  if (properties.type === 'post') {
+    return properties.lang === defaultLanguage
+      ? `/${properties.uid}/blog`
+      : `/blog/${properties.lang}/${doc.uid}`
   }
   return '/'
 }

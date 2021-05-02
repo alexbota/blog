@@ -7,9 +7,24 @@ import SEO from '../components/seo'
 import ContactForm from '../components/shared/ContactForm'
 
 const Contact = () => {
+  const alternateLanguages = [
+    {
+      uid: '/it-it/',
+      type: 'contactpage',
+      lang: 'it-it',
+    },
+  ]
+
+  const activeDoc = {
+    uid: '/',
+    lang: 'en-us',
+    type: 'contactpage',
+    alternateLanguages,
+  }
+
   return (
-    <DefaultLayout>
-      <SEO title="Alex Bota | Contact" />
+    <DefaultLayout activeDocMeta={activeDoc}>
+      <SEO title="Alex Bota | Contact" lang={activeDoc.lang} />
       <section className="contact p-grid p-jc-center p-mx-3 p-mx-md-6">
         <div className="p-col-12 p-lg-6 p-mb-5">
           <h1>Web development and design services.</h1>
