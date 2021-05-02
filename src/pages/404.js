@@ -5,7 +5,7 @@ import DefaultLayout from '../components/layouts'
 import { Link } from 'gatsby'
 import { Button } from 'primereact/button'
 import { withUnpublishedPreview } from 'gatsby-source-prismic'
-import { Blog } from '../templates/Blog'
+import Blog from '../templates/Blog'
 
 const Page404 = () => (
   <DefaultLayout>
