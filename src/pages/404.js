@@ -5,7 +5,7 @@ import DefaultLayout from '../components/layouts'
 import { Link } from 'gatsby'
 import { Button } from 'primereact/button'
 import { withUnpublishedPreview } from 'gatsby-source-prismic'
-import { BloghomeTemplate } from '../templates/Blog'
+import { Blog } from '../templates/Blog'
 
 const Page404 = () => (
   <DefaultLayout>
@@ -22,5 +22,5 @@ const Page404 = () => (
 )
 
 export default withUnpublishedPreview(Page404, {
-  templateMap: { blogHome: BloghomeTemplate },
+  templateMap: { blogHome: Blog },
 })

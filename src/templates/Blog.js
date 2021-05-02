@@ -23,7 +23,7 @@ const BlogHomeHead = ({ home }) => {
   )
 }
 
-const BloghomeTemplate = ({ data }) => {
+const Blog = ({ data }) => {
   if (!data) return null
   // Define the blog Home & blog Post content returned from Prismic
   const home = data.prismicBloghome.data || {}
@@ -116,4 +116,4 @@ export const query = graphql`
   }
 `
 
-export default withPreview(BloghomeTemplate)
+export default withPreview(Blog)
