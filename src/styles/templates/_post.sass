@@ -1,8 +1,11 @@
 .section-post
   margin-top: 7rem
-  h1,
+  h1
+    color: map-get($palette, 'clr-black')
+    font-size: 1.953rem
   h2
     color: map-get($palette, 'clr-black')
+    font-size: 1.563rem
   p
     color: map-get($palette, 'clr-grey')
   blockquote
@@ -21,3 +24,10 @@
 
 .post-wrapper
   max-width: 60rem !important
+
+@media screen and (min-width: 768px)
+  .section-post
+    h1
+      font-size: 3.052rem
+    h2
+      font-size: 2.441rem

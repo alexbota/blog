@@ -121,7 +121,9 @@ const Post = ({ data }) => {
   const post = data.prismicPost.data
   const { lang, type } = data.prismicPost
   const alternateLanguages = data.prismicPost.alternate_languages || []
+  const uid = lang === 'en-us' ? '/' : '/it-it/'
   const activeDoc = {
+    uid,
     lang,
     type,
     alternateLanguages,

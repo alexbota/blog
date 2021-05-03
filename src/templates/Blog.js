@@ -12,13 +12,13 @@ const BlogHomeHead = ({ home }) => {
   return (
     <div className="home-header p-mb-6" data-wio-id={home.id}>
       <div className="blog-avatar" style={avatar} />
-      <div className="p-d-flex p-jc-between p-ai-center">
+      <div className="p-d-flex p-flex-column p-flex-md-row p-jc-between p-ai-center">
         <h1 className="text-lg">{RichText.asText(home.headline)}</h1>
         <a target="_blank" rel="noreferrer" href={home.twitter.url}>
           Follow me on Twitter <i className="pi pi-twitter" />
         </a>
       </div>
-      <p>{RichText.asText(home.description)}</p>
+      <p className="p-mt-3">{RichText.asText(home.description)}</p>
     </div>
   )
 }

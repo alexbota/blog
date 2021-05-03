@@ -34,13 +34,14 @@ const IndexPage = () => {
       <SEO
         title="Alex Bota | Web Developer React"
         keywords={[
-          `alex bota`,
-          `react web developer`,
+          `web developer`,
+          `react developer`,
           `sito web`,
-          `creazione sito web milano`,
-          `freelance web developer milano`,
+          `website`,
+          `freelance web developer`,
+          `freelance react developer`,
         ]}
-        lang={activeDoc.lang}
+        lang={activeDoc.lang.slice(0, 2)}
       />
       <div className="home-wrapper">
         <HomeHero data={homepage.hero} />

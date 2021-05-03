@@ -32,15 +32,15 @@ const IndexPage = () => {
   return (
     <DefaultLayout activeDocMeta={activeDoc}>
       <SEO
-        title="Alex Bota | Web Developer React"
+        title="Alex Bota | Sviluppatore Web React"
         keywords={[
-          `alex bota`,
-          `react web developer`,
-          `sito web`,
-          `creazione sito web milano`,
-          `freelance web developer milano`,
+          `sviluppatore web`,
+          `sviluppatore react`,
+          `siti web`,
+          `creazione sito web`,
+          `milano sito web`,
         ]}
-        lang={activeDoc.lang}
+        lang={activeDoc.lang.slice(0, 2)}
       />
       <div className="home-wrapper">
         <HomeHero data={homepage.hero} />
