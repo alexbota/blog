@@ -108,7 +108,7 @@ const ContactFormIt = () => {
   return (
     <>
       <Dialog
-        header="Privacy Policy"
+        header="Politica sulla privacy"
         visible={displayTerms}
         footer={termsDialogFooter}
         onHide={onHide}
@@ -133,7 +133,7 @@ const ContactFormIt = () => {
             ></i>
             <h5>Iniziamo!</h5>
             <p style={{ lineHeight: 1.5, textIndent: '1rem' }}>
-              Grazie per avermi contattato <b>{formData.name}</b> ; Non vedo l'ora di scoprire di più sul tuo progetto. Attendi la mia risposta tra poche ora all'indirizzo <b>{formData.email}</b>.
+              Grazie per avermi contattato <b>{formData.name}</b> ; Non vedo l'ora di scoprire di più sul tuo progetto. Attendi la mia risposta tra poche ore all'indirizzo <b>{formData.email}</b>.
             </p>
           </div>
         </Dialog>
