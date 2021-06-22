@@ -1,34 +1,31 @@
-import React from 'react'
-import { navigate } from 'gatsby'
-import linkResolver from '../../../utils/linkResolver'
 import './index.scss'
+
+import { Dropdown } from 'primereact/dropdown'
+import React from 'react'
+import linkResolver from '../../../utils/linkResolver'
+import { navigate } from 'gatsby'
 
 const LanguageSwitcher = ({ activeDocMeta }) => {
   const currentLang = activeDocMeta.lang
-  const currentLangOption = (
-    <option value={currentLang}>{currentLang.slice(0, 2).toUpperCase()}</option>
-  )
 
-  console.log(activeDocMeta.alternateLanguages[0])
+  const alternateLangOptions = [
+    {
+      name: activeDocMeta.alternateLanguages[0].lang.slice(0, 2).toUpperCase(),
+    },
+  ]
 
-  const alternateLangOptions = activeDocMeta.alternateLanguages.map(
-    (altLang, index) => (
-      <option value={linkResolver(altLang)} key={`alt-lang-${index}`}>
-        {altLang.lang.slice(0, 2).toUpperCase()}
-      </option>
-    )
-  )
-
-  const handleLangChange = (e) => {
-    navigate(e.target.value)
+  const handleLangChange = () => {
+    navigate(linkResolver(activeDocMeta.alternateLanguages[0]))
   }
+
   return (
-    <li className="select-dropdown p-mx-4">
-      <select value={currentLang} onChange={handleLangChange}>
-        {currentLangOption}
-        {alternateLangOptions}
-      </select>
-    </li>
+    <Dropdown
+      value={currentLang}
+      options={alternateLangOptions}
+      onChange={handleLangChange}
+      optionLabel="name"
+      placeholder={currentLang.slice(0, 2).toUpperCase()}
+    />
   )
 }
 

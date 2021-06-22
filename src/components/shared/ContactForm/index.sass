@@ -1,7 +1,17 @@
-@use "sass:map"
-@import '../../../styles/variables'
+.form .card
+  min-width: 450px
 
-.submit-button
-  background: map-get($palette, 'clr-primary-2')
-.submit-button:hover
-  background: map-get($palette, 'clr-black') !important
+  & form
+    margin-top: 2rem
+
+  & .p-field
+    margin-bottom: 1.5rem
+
+@media screen and (max-width: 960px)
+  .form .card
+    width: 80%
+
+@media screen and (max-width: 640px)
+  .form .card
+    width: 100%
+    min-width: 0

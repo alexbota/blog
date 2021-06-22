@@ -4,7 +4,7 @@ import DefaultLayout from '../components/layouts'
 // import SEO
 import SEO from '../components/seo'
 // import components
-import ContactForm from '../components/shared/ContactForm'
+import ContactForm from '../components/shared/ContactForm/ContactForm'
 
 const Contact = () => {
   const alternateLanguages = [

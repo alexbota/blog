@@ -9,9 +9,9 @@ import HomeAbout from '../components/home/HomeAbout'
 import HomeServices from '../components/home/HomeServices'
 import HomeTech from '../components/home/HomeTech'
 import HomeWorkflow from '../components/home/HomeWorkflow'
-import HomeContact from '../components/home/HomeContact'
 import { Divider } from 'primereact/divider'
 import homepage from '../documents/it-it/homepage'
+import ContactFormIt from '../components/shared/ContactForm/ContactFormIt'
 
 const IndexPage = () => {
   const alternateLanguages = [
@@ -53,7 +53,7 @@ const IndexPage = () => {
           <Divider />
           <HomeTech data={homepage.tech} />
           <Divider />
-          <HomeContact />
+          <ContactFormIt />
         </div>
       </div>
     </DefaultLayout>

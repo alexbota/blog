@@ -1,0 +1,22 @@
+{
+  "title": "Let's talk about your project.",
+  "name": "Name*",
+  "product": "Product",
+  "product_item": {
+    "one": "Marketing website",
+    "two": "Landing page",
+    "three": "E-commerce",
+    "four": "Web Application",
+    "five": "Other"
+  },
+  "description": "Description*",
+  "privacy": "I agree to the privacy policy*",
+  "submit": "Submit",
+  "error": {
+    "name": "Name is required.",
+    "email": "Email is required.",
+    "invalid_email": "Invalid email address. E.g. example@email.com",
+    "description": "Description is required",
+    "privacy": "You need to agree to the privacy policy."
+  }
+}

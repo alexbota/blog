@@ -4,7 +4,7 @@ import DefaultLayout from '../components/layouts'
 // import SEO
 import SEO from '../components/seo'
 // import components
-import ContactForm from '../components/shared/ContactForm'
+import ContactFormIt from '../components/shared/ContactForm/ContactFormIt'
 
 const Contact = () => {
   const alternateLanguages = [
@@ -35,7 +35,7 @@ const Contact = () => {
           </h4>
         </div>
         <div className="p-col-12 p-lg-6">
-          <ContactForm />
+          <ContactFormIt />
         </div>
       </section>
     </DefaultLayout>

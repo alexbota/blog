@@ -6,13 +6,13 @@ import 'primereact/resources/primereact.css'
 import 'primeflex/primeflex.css'
 import '../../styles/global.sass'
 // import components
-import Navbar from '../shared/Navbar'
+import Header from '../shared/Header'
 import Footer from '../shared/Footer'
 
 const DefaultLayout = ({ children, activeDocMeta }) => {
   return (
     <>
-      <Navbar activeDocMeta={activeDocMeta} />
+      <Header activeDocMeta={activeDocMeta} />
       <main>{children}</main>
       <Footer />
     </>
