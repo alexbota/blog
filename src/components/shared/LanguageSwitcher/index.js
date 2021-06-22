@@ -1,5 +1,3 @@
-import './index.scss'
-
 import { Dropdown } from 'primereact/dropdown'
 import React from 'react'
 import linkResolver from '../../../utils/linkResolver'
