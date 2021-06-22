@@ -131,11 +131,9 @@ const ContactFormIt = () => {
               className="pi pi-check-circle"
               style={{ fontSize: '5rem', color: 'var(--green-500)' }}
             ></i>
-            <h5>Let's get started!</h5>
+            <h5>Iniziamo!</h5>
             <p style={{ lineHeight: 1.5, textIndent: '1rem' }}>
-              Thank you for contacting me <b>{formData.name}</b> ; I'm excited
-              to discover more about your project. Expect my response in just a
-              few hours at <b>{formData.email}</b>.
+              Grazie per avermi contattato <b>{formData.name}</b> ; Non vedo l'ora di scoprire di più sul tuo progetto. Attendi la mia risposta tra poche ora all'indirizzo <b>{formData.email}</b>.
             </p>
           </div>
         </Dialog>
@@ -151,7 +149,6 @@ const ContactFormIt = () => {
                     name="name"
                     value={formik.values.name}
                     onChange={formik.handleChange}
-                    autoFocus
                     className={classNames({
                       'p-invalid': isFormFieldValid('name'),
                     })}
@@ -211,7 +208,6 @@ const ContactFormIt = () => {
                     value={formik.values.description}
                     onChange={formik.handleChange}
                     rows="4"
-                    autoFocus
                     className={classNames({
                       'p-invalid': isFormFieldValid('description'),
                     })}

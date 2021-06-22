@@ -152,7 +152,6 @@ const ContactForm = () => {
                     name="name"
                     value={formik.values.name}
                     onChange={formik.handleChange}
-                    autoFocus
                     className={classNames({
                       'p-invalid': isFormFieldValid('name'),
                     })}
@@ -212,7 +211,6 @@ const ContactForm = () => {
                     value={formik.values.description}
                     onChange={formik.handleChange}
                     rows="4"
-                    autoFocus
                     className={classNames({
                       'p-invalid': isFormFieldValid('description'),
                     })}
