@@ -1,10 +1,11 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { RichText } from 'prismic-reactjs'
-import { withPreview } from 'gatsby-source-prismic'
-import SEO from '../components/seo'
-import DefaultLayout from '../components/layouts'
 import { ImageCaption, Quote, Text } from '../components/blog/slices'
+import { Link, graphql } from 'gatsby'
+
+import DefaultLayout from '../components/layouts'
+import React from 'react'
+import { RichText } from 'prismic-reactjs'
+import SEO from '../components/seo'
+import { withPreview } from 'gatsby-source-prismic'
 
 // Query for the blog Post content in Prismic
 export const query = graphql`
@@ -129,14 +130,14 @@ const Post = ({ data }) => {
     alternateLanguages,
   }
   return (
-    <DefaultLayout activeDocMeta={activeDoc}>
-      <SEO
-        title={`Alex Bota | ${post.title.raw[0].text}`}
-        keywords={[`blog`]}
-        lang={lang.slice(0, 2)}
-      />
-      <PostBody blogPost={post} activeDoc={activeDoc} />
-    </DefaultLayout>
+    // <DefaultLayout activeDocMeta={activeDoc}>
+    //   <SEO
+    //     title={`Alex Bota | ${post.title.raw[0].text}`}
+    //     keywords={[`blog`]}
+    //     lang={lang.slice(0, 2)}
+    //   />
+    <PostBody blogPost={post} activeDoc={activeDoc} />
+    // </DefaultLayout>
   )
 }
 
