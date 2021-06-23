@@ -110,7 +110,6 @@ const ContactForm = () => {
       <Dialog
         header="Privacy Policy"
         visible={displayTerms}
-        style={{ width: '50vw' }}
         footer={termsDialogFooter}
         onHide={onHide}
       >

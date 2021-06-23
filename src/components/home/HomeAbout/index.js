@@ -1,5 +1,5 @@
 import React from 'react'
-import undraw_work_together from '../../../images/undraw_work_together.svg'
+import illustration from '../../../images/undraw_design_components.svg'
 
 const HomeAbout = ({ data }) => {
   return (
@@ -11,7 +11,7 @@ const HomeAbout = ({ data }) => {
         </div>
         <div className="p-col-12 p-lg-6 p-d-flex p-ai-center p-jc-center">
           <img
-            src={undraw_work_together}
+            src={illustration}
             alt="illustration"
             width="500"
             height="500"
