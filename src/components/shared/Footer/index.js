@@ -1,6 +1,7 @@
-import React from 'react'
 // import styles
 import './index.sass'
+
+import React from 'react'
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
             </a>
           </li>
           <li className="p-mx-3">
-            <a href="mailto:contact@alexbota.tech">Email</a>
+            <a href="mailto:info@alexbota.tech">Email</a>
           </li>
           <li className="p-mx-3">
             <a
